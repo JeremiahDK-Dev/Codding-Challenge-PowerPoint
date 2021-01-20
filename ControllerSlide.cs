@@ -15,6 +15,9 @@ namespace Codding_Challenge_PowerPoint
         public static bool underline = false;
         public static float textSize = 12;
         public static List<Image> suggestedImages = new List<Image>();
+        public static string titleText;
+        public static string bodyText;
+
         public static PictureBox pictureBox1Reference;
         
         public static PictureBox pictureBox2Reference;
@@ -26,13 +29,14 @@ namespace Codding_Challenge_PowerPoint
         public static PictureBox pictureBox8Reference;
         public static PictureBox pictureBox9Reference;
         
-        public static Slide1 slide1;
+      
+
         public static ImageResults imageResultsPage;
 
         public ControllerSlide()
         {
-            slide1 = new Slide1();
-            imageResultsPage = new ImageResults();
+           
+           
             
             
             InitializeComponent();
@@ -50,7 +54,11 @@ namespace Codding_Challenge_PowerPoint
 
         private void ControllerSlide_Load(object sender, EventArgs e)
         {
-            
+            titleText = "";
+            bodyText = "";
+            ImageGenerator newMDIChild = new ImageGenerator();
+            newMDIChild.MdiParent = this;
+            newMDIChild.Show();
         }
 
         private void Slide1ToolStrip_Click(object sender, EventArgs e)
@@ -185,6 +193,52 @@ namespace Codding_Challenge_PowerPoint
 
         }
 
-       
+        private void BoldCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(BoldCheckBox.Checked == false)
+            {
+                bold = false;
+            }
+            else
+            {
+                bold = true;
+            }
+        }
+
+        private void StrikeCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(StrikeCheckBox.Checked == false)
+            {
+                strikeout = false;
+            }
+            else
+            {
+                strikeout = true;
+            }
+        }
+
+        private void ItalicCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(ItalicCheckBox.Checked == false)
+            {
+                itallic = false;
+            }
+            else
+            {
+                itallic = true;
+            }
+        }
+
+        private void UnderLineCheckBox_CheckedChanged(object sender, EventArgs e)
+        {
+            if(UnderLineCheckBox.Checked == false)
+            {
+                underline = false;
+            }
+            else
+            {
+                underline = true;
+            }
+        }
     }
 }

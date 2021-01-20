@@ -49,25 +49,31 @@ namespace Codding_Challenge_PowerPoint
             this.uNDERLINEToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.UnderlineEnable = new System.Windows.Forms.ToolStripMenuItem();
             this.UnderlineDisable = new System.Windows.Forms.ToolStripMenuItem();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
-            this.pictureBox6 = new System.Windows.Forms.PictureBox();
-            this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.FontStyleGroupBox = new System.Windows.Forms.GroupBox();
+            this.UnderLineCheckBox = new System.Windows.Forms.CheckBox();
+            this.StrikeCheckBox = new System.Windows.Forms.CheckBox();
+            this.ItalicCheckBox = new System.Windows.Forms.CheckBox();
+            this.BoldCheckBox = new System.Windows.Forms.CheckBox();
             this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBox7 = new System.Windows.Forms.PictureBox();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.menuStrip1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            this.FontStyleGroupBox.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // menuStrip1
@@ -83,6 +89,7 @@ namespace Codding_Challenge_PowerPoint
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
             this.menuStrip1.TabIndex = 1;
             this.menuStrip1.Text = "SlideStrips";
+            this.menuStrip1.Visible = false;
             // 
             // Slide1ToolStrip
             // 
@@ -130,7 +137,7 @@ namespace Codding_Challenge_PowerPoint
             this.sTRIKEOUTToolStripMenuItem,
             this.uNDERLINEToolStripMenuItem});
             this.textStyleToolStripMenuItem.Name = "textStyleToolStripMenuItem";
-            this.textStyleToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.textStyleToolStripMenuItem.Size = new System.Drawing.Size(123, 22);
             this.textStyleToolStripMenuItem.Text = "Text Style";
             this.textStyleToolStripMenuItem.Click += new System.EventHandler(this.textStyleToolStripMenuItem_Click);
             // 
@@ -247,77 +254,72 @@ namespace Codding_Challenge_PowerPoint
             this.UnderlineDisable.Text = "Disable";
             this.UnderlineDisable.Click += new System.EventHandler(this.UnderlineDisable_Click);
             // 
-            // pictureBox1
+            // FontStyleGroupBox
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(12, 85);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox1.TabIndex = 3;
-            this.pictureBox1.TabStop = false;
-            this.pictureBox1.Visible = false;
+            this.FontStyleGroupBox.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.FontStyleGroupBox.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.FontStyleGroupBox.Controls.Add(this.UnderLineCheckBox);
+            this.FontStyleGroupBox.Controls.Add(this.StrikeCheckBox);
+            this.FontStyleGroupBox.Controls.Add(this.ItalicCheckBox);
+            this.FontStyleGroupBox.Controls.Add(this.BoldCheckBox);
+            this.FontStyleGroupBox.Location = new System.Drawing.Point(636, 0);
+            this.FontStyleGroupBox.Name = "FontStyleGroupBox";
+            this.FontStyleGroupBox.Size = new System.Drawing.Size(164, 75);
+            this.FontStyleGroupBox.TabIndex = 14;
+            this.FontStyleGroupBox.TabStop = false;
+            this.FontStyleGroupBox.Text = "Click To Toggle Font Style";
             // 
-            // pictureBox2
+            // UnderLineCheckBox
             // 
-            this.pictureBox2.Location = new System.Drawing.Point(132, 85);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox2.TabIndex = 5;
-            this.pictureBox2.TabStop = false;
-            this.pictureBox2.Visible = false;
+            this.UnderLineCheckBox.AutoSize = true;
+            this.UnderLineCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.UnderLineCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Underline))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.UnderLineCheckBox.Location = new System.Drawing.Point(71, 42);
+            this.UnderLineCheckBox.Name = "UnderLineCheckBox";
+            this.UnderLineCheckBox.Size = new System.Drawing.Size(54, 17);
+            this.UnderLineCheckBox.TabIndex = 3;
+            this.UnderLineCheckBox.Text = "LINE";
+            this.UnderLineCheckBox.UseVisualStyleBackColor = true;
+            this.UnderLineCheckBox.CheckedChanged += new System.EventHandler(this.UnderLineCheckBox_CheckedChanged);
             // 
-            // pictureBox3
+            // StrikeCheckBox
             // 
-            this.pictureBox3.Location = new System.Drawing.Point(250, 85);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox3.TabIndex = 6;
-            this.pictureBox3.TabStop = false;
-            this.pictureBox3.Visible = false;
+            this.StrikeCheckBox.AutoSize = true;
+            this.StrikeCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.StrikeCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Strikeout))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.StrikeCheckBox.Location = new System.Drawing.Point(71, 19);
+            this.StrikeCheckBox.Name = "StrikeCheckBox";
+            this.StrikeCheckBox.Size = new System.Drawing.Size(71, 17);
+            this.StrikeCheckBox.TabIndex = 2;
+            this.StrikeCheckBox.Text = "STRIKE";
+            this.StrikeCheckBox.UseVisualStyleBackColor = true;
+            this.StrikeCheckBox.CheckedChanged += new System.EventHandler(this.StrikeCheckBox_CheckedChanged);
             // 
-            // pictureBox4
+            // ItalicCheckBox
             // 
-            this.pictureBox4.Location = new System.Drawing.Point(132, 236);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox4.TabIndex = 7;
-            this.pictureBox4.TabStop = false;
-            this.pictureBox4.Visible = false;
+            this.ItalicCheckBox.AutoSize = true;
+            this.ItalicCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.ItalicCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.ItalicCheckBox.Location = new System.Drawing.Point(6, 42);
+            this.ItalicCheckBox.Name = "ItalicCheckBox";
+            this.ItalicCheckBox.Size = new System.Drawing.Size(59, 17);
+            this.ItalicCheckBox.TabIndex = 1;
+            this.ItalicCheckBox.Text = "ITALIC";
+            this.ItalicCheckBox.UseVisualStyleBackColor = true;
+            this.ItalicCheckBox.CheckedChanged += new System.EventHandler(this.ItalicCheckBox_CheckedChanged);
             // 
-            // pictureBox5
+            // BoldCheckBox
             // 
-            this.pictureBox5.Location = new System.Drawing.Point(250, 236);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox5.TabIndex = 8;
-            this.pictureBox5.TabStop = false;
-            this.pictureBox5.Visible = false;
-            // 
-            // pictureBox6
-            // 
-            this.pictureBox6.Location = new System.Drawing.Point(12, 158);
-            this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox6.TabIndex = 9;
-            this.pictureBox6.TabStop = false;
-            this.pictureBox6.Visible = false;
-            // 
-            // pictureBox7
-            // 
-            this.pictureBox7.Location = new System.Drawing.Point(132, 158);
-            this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox7.TabIndex = 10;
-            this.pictureBox7.TabStop = false;
-            this.pictureBox7.Visible = false;
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.Location = new System.Drawing.Point(250, 158);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(100, 50);
-            this.pictureBox8.TabIndex = 11;
-            this.pictureBox8.TabStop = false;
-            this.pictureBox8.Visible = false;
+            this.BoldCheckBox.AutoSize = true;
+            this.BoldCheckBox.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.BoldCheckBox.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.BoldCheckBox.Location = new System.Drawing.Point(6, 19);
+            this.BoldCheckBox.Name = "BoldCheckBox";
+            this.BoldCheckBox.Size = new System.Drawing.Size(59, 17);
+            this.BoldCheckBox.TabIndex = 0;
+            this.BoldCheckBox.Text = "BOLD";
+            this.BoldCheckBox.UseVisualStyleBackColor = true;
+            this.BoldCheckBox.CheckedChanged += new System.EventHandler(this.BoldCheckBox_CheckedChanged);
             // 
             // pictureBox9
             // 
@@ -328,11 +330,86 @@ namespace Codding_Challenge_PowerPoint
             this.pictureBox9.TabStop = false;
             this.pictureBox9.Visible = false;
             // 
+            // pictureBox8
+            // 
+            this.pictureBox8.Location = new System.Drawing.Point(250, 158);
+            this.pictureBox8.Name = "pictureBox8";
+            this.pictureBox8.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox8.TabIndex = 11;
+            this.pictureBox8.TabStop = false;
+            this.pictureBox8.Visible = false;
+            // 
+            // pictureBox7
+            // 
+            this.pictureBox7.Location = new System.Drawing.Point(132, 158);
+            this.pictureBox7.Name = "pictureBox7";
+            this.pictureBox7.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox7.TabIndex = 10;
+            this.pictureBox7.TabStop = false;
+            this.pictureBox7.Visible = false;
+            // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Location = new System.Drawing.Point(12, 158);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox6.TabIndex = 9;
+            this.pictureBox6.TabStop = false;
+            this.pictureBox6.Visible = false;
+            // 
+            // pictureBox5
+            // 
+            this.pictureBox5.Location = new System.Drawing.Point(250, 236);
+            this.pictureBox5.Name = "pictureBox5";
+            this.pictureBox5.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox5.TabIndex = 8;
+            this.pictureBox5.TabStop = false;
+            this.pictureBox5.Visible = false;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.Location = new System.Drawing.Point(132, 236);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox4.TabIndex = 7;
+            this.pictureBox4.TabStop = false;
+            this.pictureBox4.Visible = false;
+            // 
+            // pictureBox3
+            // 
+            this.pictureBox3.Location = new System.Drawing.Point(250, 85);
+            this.pictureBox3.Name = "pictureBox3";
+            this.pictureBox3.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox3.TabIndex = 6;
+            this.pictureBox3.TabStop = false;
+            this.pictureBox3.Visible = false;
+            // 
+            // pictureBox2
+            // 
+            this.pictureBox2.Location = new System.Drawing.Point(132, 85);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox2.TabIndex = 5;
+            this.pictureBox2.TabStop = false;
+            this.pictureBox2.Visible = false;
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.Location = new System.Drawing.Point(12, 85);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(100, 50);
+            this.pictureBox1.TabIndex = 3;
+            this.pictureBox1.TabStop = false;
+            this.pictureBox1.Visible = false;
+            // 
             // ControllerSlide
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.FontStyleGroupBox);
             this.Controls.Add(this.pictureBox9);
             this.Controls.Add(this.pictureBox8);
             this.Controls.Add(this.pictureBox7);
@@ -343,6 +420,7 @@ namespace Codding_Challenge_PowerPoint
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.menuStrip1);
             this.Controls.Add(this.pictureBox1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
             this.IsMdiContainer = true;
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "ControllerSlide";
@@ -351,15 +429,17 @@ namespace Codding_Challenge_PowerPoint
             this.Load += new System.EventHandler(this.ControllerSlide_Load);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            this.FontStyleGroupBox.ResumeLayout(false);
+            this.FontStyleGroupBox.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -396,5 +476,10 @@ namespace Codding_Challenge_PowerPoint
         private System.Windows.Forms.PictureBox pictureBox7;
         private System.Windows.Forms.PictureBox pictureBox8;
         private System.Windows.Forms.PictureBox pictureBox9;
+        private System.Windows.Forms.GroupBox FontStyleGroupBox;
+        private System.Windows.Forms.CheckBox UnderLineCheckBox;
+        private System.Windows.Forms.CheckBox StrikeCheckBox;
+        private System.Windows.Forms.CheckBox ItalicCheckBox;
+        private System.Windows.Forms.CheckBox BoldCheckBox;
     }
 }

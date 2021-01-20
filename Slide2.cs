@@ -12,12 +12,15 @@ namespace Codding_Challenge_PowerPoint
         public Slide2()
         {
             InitializeComponent();
+            pictureBox1.BackgroundImage = ControllerSlide.pictureBox1Reference.BackgroundImage;
         }
 
         private void Slide2_Load(object sender, EventArgs e)
         {
-            pictureBox1.BackColor = ControllerSlide.pictureBox1Reference.BackColor;
-            pictureBox2.BackColor = ControllerSlide.pictureBox1Reference.BackColor;
+            pictureBox1.BackgroundImage = ControllerSlide.pictureBox1Reference.BackgroundImage;
+           // pictureBox2.BackgroundImage = ControllerSlide.pictureBox1Reference.BackgroundImage;
+            bodyTextBox.AppendText(ControllerSlide.bodyText);
+            titleTextBox.AppendText(ControllerSlide.titleText);
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)

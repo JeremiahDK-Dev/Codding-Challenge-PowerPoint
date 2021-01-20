@@ -7,17 +7,20 @@ namespace Codding_Challenge_PowerPoint
     
     public partial class Slide1 : Form
     {
-        
+        public Image backgroundImage;
+        private ImageResults imageResults = new ImageResults();
         public Slide1()
         {
            
             InitializeComponent();
-          
+            Slide1Background.BackgroundImage = ControllerSlide.pictureBox1Reference.BackgroundImage;
         }
 
         private void Slide1_Load(object sender, EventArgs e)
         {
-            Slide1Background.BackColor = ControllerSlide.pictureBox1Reference.BackColor;
+            Slide1TextBox.AppendText(ControllerSlide.bodyText);
+            Slide1TitleBox.AppendText(ControllerSlide.titleText);
+           // backgroundImage = imageResults.imageResult1.Image;
         }
 
         private void richTextBox1_TextChanged(object sender, EventArgs e)
@@ -54,12 +57,12 @@ namespace Codding_Challenge_PowerPoint
 
         private void Slide1Background_Click(object sender, EventArgs e)
         {
-            //Changed The Background To The Users Selected Image Background From The Image Results Page//
+           // Changed The Background To The Users Selected Image Background From The Image Results Page//
 
            // var rnd = ControllerSlide.suggestedImages;
             //int image = rnd.Next(minValue: 0, maxValue: 0);
 
-            Slide1Background.BackColor = ControllerSlide.pictureBox1Reference.BackColor;
+          //  Slide1Background.BackgroundImage = ControllerSlide.pictureBox1Reference.BackgroundImage;
         }
     }
 }

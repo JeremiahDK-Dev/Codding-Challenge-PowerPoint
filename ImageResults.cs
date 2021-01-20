@@ -12,9 +12,12 @@ namespace Codding_Challenge_PowerPoint
     {
 
 
-        public PictureBox imageResult1;
+        public Image imageResult1;
         public string titleText;
         public string boldTexts;
+        private bool imageChosen = false;
+        public List<Form> formList = new List<Form>();
+        public Slide1 slide1;
         public ImageGenerator imageGenerator = new ImageGenerator();
 
         public ImageResults()
@@ -22,23 +25,56 @@ namespace Codding_Challenge_PowerPoint
            
             
             InitializeComponent();
-
+            
 
       
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void GenerateSlideButton_Click(object sender, EventArgs e)
         {
-            
-            this.Close();
+            var rng = new Random();
+
+            if(imageChosen == false)
+            {
+                System.Windows.MessageBox.Show("Must chose a Background, Click on a Background");
+            }
+            else
+            {
+
+
+                int randomSlide = rng.Next(1, 3);
+
+                if(randomSlide == 1)
+                {
+                    Slide1 slide1 = new Slide1();
+                    slide1.Show();
+                }else if(randomSlide == 2)
+                {
+                    Slide2 slide2 = new Slide2();
+                    slide2.Show();
+                }else if(randomSlide == 3)
+                {
+                    Slide3 slide3 = new Slide3();
+                    slide3.Show();
+                }
+
+                
+                this.Close();
+            }
+           
         }
 
-
+        private void ImageResults_Load(object sender, EventArgs e)
+        {
+            imageChosen = false;
+        }
         //All Functions That Would Of Handled The Image to Slide Background.
         private void pictureBox1_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox1.BackColor;
-           
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox1.BackgroundImage;
+            
+            //imageResult1 = pictureBox1.Image;
+            imageChosen = true;
           
         }
 
@@ -70,37 +106,51 @@ namespace Codding_Challenge_PowerPoint
 
         private void pictureBox2_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox2.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox2.BackgroundImage;
+            imageChosen = true;
+            
         }
 
         private void pictureBox3_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox3.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox3.BackgroundImage;
+            imageChosen = true;
+            
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox4.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox4.BackgroundImage;
+            imageChosen = true;
+            
         }
 
         private void pictureBox5_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox5.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox5.BackgroundImage;
+            imageChosen = true;
+           
         }
 
         private void pictureBox6_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox6.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox6.BackgroundImage;
+            imageChosen = true;
+           
         }
 
         private void pictureBox7_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox7.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox7.BackgroundImage;
+            imageChosen = true;
+            
         }
 
         private void pictureBox8_Click(object sender, EventArgs e)
         {
-            ControllerSlide.pictureBox1Reference.BackColor = pictureBox8.BackColor;
+            ControllerSlide.pictureBox1Reference.BackgroundImage = pictureBox8.BackgroundImage;
+            imageChosen = true;
+            
         }
     }
 }
